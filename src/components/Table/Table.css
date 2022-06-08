@@ -40,3 +40,20 @@ tr:nth-child(even) {
    cursor: pointer;
 }
 
+/* th-sorting */
+.th-sorting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.th-sort-icon{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* srt-icon */
+.srt-icon{
+    cursor: pointer;
+}

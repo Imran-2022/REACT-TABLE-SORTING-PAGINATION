@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Table.css"
 import TableData from './TableData';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Table = () => {
@@ -13,7 +13,6 @@ const Table = () => {
         })
     }, [])
     const [text, setText] = useState("");
-
     const [searchData, setSearchData] = useState([])
     const onSubmit = evt => {
         evt.preventDefault();
@@ -22,7 +21,6 @@ const Table = () => {
         } else {
             // alert(text);
             console.log(text)
-
             // setText("");
         }
     };
@@ -63,15 +61,14 @@ const Table = () => {
             </div>
             <table>
                 <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Age</th>
-                        <th>Email</th>
-                        <th>Website</th>
+                    <tr className='tr'>
+                        <th > <div className='th-sorting'>First Name <div className='th-sort-icon'><AiOutlineUp  className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
+                        <th > <div className='th-sorting'>Last Name <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
+                        <th > <div className='th-sorting'>Age <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
+                        <th > <div className='th-sorting'>Email <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
+                        <th > <div className='th-sorting'>Website <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
                     </tr>
                 </thead>
-
                 {
                     text !== "" ? searchData.length ? searchData.slice(0, 10).map((data, idx) => {
 
@@ -81,7 +78,7 @@ const Table = () => {
                             </tbody>
                         )
                     }) : <div>
-                        <h1 style={{textAlign: 'center',marginTop:"150px",color:"#0000009c"}}>there's no available data</h1>
+                        <h1 style={{ textAlign: 'center', marginTop: "150px", color: "#0000009c" }}>there's no available data</h1>
                     </div> :
 
                         data.slice(0, 10).map((data, idx) => {
