@@ -19,15 +19,15 @@ const SingleData = () => {
             {singleUser.first_name ? <div style={{ padding: "10px" }}>
                 <h1 className="singleHeading"><IoMdArrowBack  onClick={() => navigate(-1)} style={{ cursor: "pointer" }} /> Details:{first_name + " " + last_name}</h1>
                 <div className="details">
-                    <p>First Name : {first_name}</p>
-                    <p>Last Name : {last_name}</p>
-                    <p>Company_name : {company_name}</p>
-                    <p>City : {city}</p>
-                    <p>State : {state}</p>
-                    <p>Zip : {zip}</p>
-                    <p>Email : {email}</p>
-                    <p>Web : {web}</p>
-                    <p>Age : {age}</p>
+                    <p>First Name : <span style={{fontWeight: "bold",color:"#000"}}>{first_name}</span></p>
+                    <p>Last Name : <span style={{fontWeight: "bold",color:"#000"}}>{last_name}</span></p>
+                    <p>Company_name : <span style={{fontWeight: "bold",color:"#000"}}>{company_name}</span></p>
+                    <p>City : <span style={{fontWeight: "bold",color:"#000"}}>{city}</span></p>
+                    <p>State : <span style={{fontWeight: "bold",color:"#000"}}>{state}</span></p>
+                    <p>Zip : <span style={{fontWeight: "bold",color:"#000"}}>{zip}</span></p>
+                    <p>Email : <span style={{fontWeight: "bold",color:"#000"}}>{email}</span></p>
+                    <p>Web : <span style={{fontWeight: "bold",color:"#000"}}>{web}</span></p>
+                    <p>Age : <span style={{fontWeight: "bold",color:"#000"}}>{age}</span></p>
                 </div>
             </div>
                 :

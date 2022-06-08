@@ -10,6 +10,9 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+td{
+    color: hsl(219deg 6% 42%);
+}
 
 td,
 th {

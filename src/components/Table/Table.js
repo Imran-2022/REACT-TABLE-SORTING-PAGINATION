@@ -30,6 +30,30 @@ const Table = () => {
         const searchResult = data && data.filter(dt => dt.first_name.toLowerCase().includes(text.toLowerCase()) || dt.last_name.toLowerCase().includes(text.toLowerCase()))
         setSearchData(searchResult)
     }, [text])
+
+
+    const ascendingF=()=>{
+        
+    }
+    const descendingF=()=>{
+
+    }
+    const ascendingL=()=>{
+        
+    }
+    const descendingL=()=>{
+
+    }
+    const ascendingA=()=>{
+        
+    }
+    const descendingA=()=>{
+
+    }
+
+
+
+
     return (
         <div className='table'>
             <h1 style={{ color: "#0000009c" }}>Users</h1>
@@ -54,7 +78,7 @@ const Table = () => {
                         draggable
                         pauseOnHover
                     />
-                    <button type="submit" className="p-2 text-center text-blue-500 w-1/4 bg-white border-l">
+                    <button type="submit" style={{backgroundColor:'#fff'}}>
                         <AiOutlineSearch />
                     </button>
                 </form>
@@ -62,11 +86,11 @@ const Table = () => {
             <table>
                 <thead>
                     <tr className='tr'>
-                        <th > <div className='th-sorting'>First Name <div className='th-sort-icon'><AiOutlineUp  className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
-                        <th > <div className='th-sorting'>Last Name <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
-                        <th > <div className='th-sorting'>Age <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
-                        <th > <div className='th-sorting'>Email <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
-                        <th > <div className='th-sorting'>Website <div className='th-sort-icon'><AiOutlineUp className='srt-icon'/><AiOutlineDown className='srt-icon'/></div></div> </th>
+                        <th > <div className='th-sorting'>First Name <div className='th-sort-icon'><AiOutlineUp onClick={ascendingF} className='srt-icon' /><AiOutlineDown onClick={descendingF} className='srt-icon' /></div></div> </th>
+                        <th > <div className='th-sorting'>Last Name <div className='th-sort-icon'><AiOutlineUp onClick={ascendingL} className='srt-icon' /><AiOutlineDown onClick={descendingL}  className='srt-icon' /></div></div> </th>
+                        <th > <div className='th-sorting'>Age <div className='th-sort-icon'><AiOutlineUp onClick={ascendingA} className='srt-icon' /><AiOutlineDown onClick={descendingA}  className='srt-icon' /></div></div> </th>
+                        <th > <div className='th-sorting'>Email <div className='th-sort-icon'><AiOutlineUp className='srt-icon' /><AiOutlineDown className='srt-icon' /></div></div> </th>
+                        <th > <div className='th-sorting'>Website <div className='th-sort-icon'><AiOutlineUp className='srt-icon' /><AiOutlineDown className='srt-icon' /></div></div> </th>
                     </tr>
                 </thead>
                 {

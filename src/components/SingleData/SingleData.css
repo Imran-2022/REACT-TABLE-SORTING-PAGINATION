@@ -6,6 +6,7 @@
 .details p {
     padding: 10px;
     padding-left: 63px;
+    color: hsl(219deg 6% 42%);
 }
 
 .details p::after {

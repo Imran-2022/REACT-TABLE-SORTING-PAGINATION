@@ -10,7 +10,7 @@ const TableData = ({data}) => {
             <td>{last_name}</td>
             <td>{age}</td>
             <td>{email}</td>
-            <td>{web}</td>
+            <td><a href={web} target='_blank' rel="noreferrer" style={{color:"hsl(209deg 100% 73%)",textDecoration:"none"}}>{web}</a></td>
         </tr>
     );
 };
