@@ -8,7 +8,7 @@ import SingleData from './components/SingleData/SingleData';
 function App() {
   return (
     <Routes>
-      <Route exact path="/users" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/users" element={<Home />} />
       <Route path="/users/:id" element={<SingleData />} />
     </Routes>
