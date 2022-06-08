@@ -1,0 +1,36 @@
+.table {
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    margin:50px auto;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+/* search */
+.user-search{
+    margin: 20px 0px;
+    display: flex;
+}
+.user-search input{
+    padding: 10px;
+    width:25%;
+}
+.user-search button{
+    padding: 10px;
+   font-size: 20px;
+}
