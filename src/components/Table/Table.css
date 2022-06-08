@@ -29,8 +29,14 @@ tr:nth-child(even) {
 .user-search input{
     padding: 10px;
     width:25%;
+    outline: none;
+    border: 1px solid #dddddd;
 }
 .user-search button{
     padding: 10px;
    font-size: 20px;
+   outline: none;
+   border: 1px solid #dddddd;
+   cursor: pointer;
 }
+
