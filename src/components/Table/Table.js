@@ -32,26 +32,56 @@ const Table = () => {
     }, [text])
 
 
-    const ascendingF=()=>{
-        
-    }
-    const descendingF=()=>{
 
-    }
-    const ascendingL=()=>{
-        
-    }
-    const descendingL=()=>{
-
-    }
-    const ascendingA=()=>{
-        
-    }
-    const descendingA=()=>{
-
-    }
+// first name
 
 
+    const ascendingF = () => {
+        data && setData([...data].sort((a, b) =>a.first_name.toLowerCase() > b.first_name.toLowerCase() ? -1 : 1))
+    }
+    const descendingF = () => {
+        data && setData([...data].sort((a, b) =>a.first_name.toLowerCase() < b.first_name.toLowerCase() ? -1 : 1))
+    }
+
+    // last Name
+
+
+    const ascendingL = () => {
+        data && setData([...data].sort((a, b) =>a.last_name.toLowerCase() > b.last_name.toLowerCase() ? -1 : 1))
+    }
+    const descendingL = () => {
+        data && setData([...data].sort((a, b) =>a.last_name.toLowerCase() < b.last_name.toLowerCase() ? -1 : 1))
+    }
+
+    // age
+
+
+    const ascendingA = () => {
+        data && setData([...data].sort((a, b) =>a.age - b.age))
+    }
+    const descendingA = () => {
+        data && setData([...data].sort((a, b) => b.age-a.age ))
+    }
+
+
+    // email
+
+
+    const ascendingE = () => {
+        data && setData([...data].sort((a, b) =>a.email > b.email ? -1 : 1))
+    }
+    const descendingE = () => {
+        data && setData([...data].sort((a, b) =>a.email < b.email ? -1 : 1))
+    }
+
+
+    // web 
+    const ascendingW = () => {
+        data && setData([...data].sort((a, b) =>a.web.toLowerCase() > b.web.toLowerCase() ? -1 : 1))
+    }
+    const descendingW = () => {
+        data && setData([...data].sort((a, b) =>a.web.toLowerCase() < b.web.toLowerCase() ? -1 : 1))
+    }
 
 
     return (
@@ -78,7 +108,7 @@ const Table = () => {
                         draggable
                         pauseOnHover
                     />
-                    <button type="submit" style={{backgroundColor:'#fff'}}>
+                    <button type="submit" style={{ backgroundColor: '#fff' }}>
                         <AiOutlineSearch />
                     </button>
                 </form>
@@ -86,11 +116,19 @@ const Table = () => {
             <table>
                 <thead>
                     <tr className='tr'>
-                        <th > <div className='th-sorting'>First Name <div className='th-sort-icon'><AiOutlineUp onClick={ascendingF} className='srt-icon' /><AiOutlineDown onClick={descendingF} className='srt-icon' /></div></div> </th>
-                        <th > <div className='th-sorting'>Last Name <div className='th-sort-icon'><AiOutlineUp onClick={ascendingL} className='srt-icon' /><AiOutlineDown onClick={descendingL}  className='srt-icon' /></div></div> </th>
-                        <th > <div className='th-sorting'>Age <div className='th-sort-icon'><AiOutlineUp onClick={ascendingA} className='srt-icon' /><AiOutlineDown onClick={descendingA}  className='srt-icon' /></div></div> </th>
-                        <th > <div className='th-sorting'>Email <div className='th-sort-icon'><AiOutlineUp className='srt-icon' /><AiOutlineDown className='srt-icon' /></div></div> </th>
-                        <th > <div className='th-sorting'>Website <div className='th-sort-icon'><AiOutlineUp className='srt-icon' /><AiOutlineDown className='srt-icon' /></div></div> </th>
+                        <th > <div className='th-sorting'>First Name <div className='th-sort-icon'><AiOutlineUp  onClick={descendingF}className='srt-icon' /><AiOutlineDown onClick={ascendingF} className='srt-icon' /></div></div> </th>
+
+
+                        <th > <div className='th-sorting'>Last Name <div className='th-sort-icon'><AiOutlineUp onClick={descendingL} className='srt-icon' /><AiOutlineDown onClick={ascendingL}  className='srt-icon' /></div></div> </th>
+
+
+                        <th > <div className='th-sorting'>Age <div className='th-sort-icon'><AiOutlineUp onClick={descendingA}  className='srt-icon' /><AiOutlineDown onClick={ascendingA} className='srt-icon' /></div></div> </th>
+
+
+                        <th > <div className='th-sorting'>Email <div className='th-sort-icon'><AiOutlineUp onClick={descendingE}className='srt-icon' /><AiOutlineDown onClick={ascendingE} className='srt-icon' /></div></div> </th>
+
+
+                        <th > <div className='th-sorting'>Website <div className='th-sort-icon'><AiOutlineUp onClick={descendingW} className='srt-icon' /><AiOutlineDown onClick={ascendingW} className='srt-icon' /></div></div> </th>
                     </tr>
                 </thead>
                 {

@@ -17,7 +17,7 @@ const SingleData = () => {
     return (
         <div className="singleData">
             {singleUser.first_name ? <div style={{ padding: "10px" }}>
-                <h1 className="singleHeading"><IoMdArrowBack  onClick={() => navigate(-1)} style={{ cursor: "pointer" }} /> Details:{first_name + " " + last_name}</h1>
+                <h1 className="singleHeading"><IoMdArrowBack  onClick={() => navigate("/users")} style={{ cursor: "pointer" }} /> Details:{first_name + " " + last_name}</h1>
                 <div className="details">
                     <p>First Name : <span style={{fontWeight: "bold",color:"#000"}}>{first_name}</span></p>
                     <p>Last Name : <span style={{fontWeight: "bold",color:"#000"}}>{last_name}</span></p>
