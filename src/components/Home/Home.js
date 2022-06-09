@@ -1,10 +1,10 @@
 import React from 'react';
-import Table from '../Table/Table';
+import PaginationComponent from '../Table/TableData';
 import "./Home.css"
 const Home = () => {
     return (
         <div>
-            <Table/>
+            <PaginationComponent/>
         </div>
     );
 };

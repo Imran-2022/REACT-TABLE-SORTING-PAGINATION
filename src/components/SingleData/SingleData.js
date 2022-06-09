@@ -26,7 +26,7 @@ const SingleData = () => {
                     <p>State : <span style={{fontWeight: "bold",color:"#000"}}>{state}</span></p>
                     <p>Zip : <span style={{fontWeight: "bold",color:"#000"}}>{zip}</span></p>
                     <p>Email : <span style={{fontWeight: "bold",color:"#000"}}>{email}</span></p>
-                    <p>Web : <span style={{fontWeight: "bold",color:"#000"}}>{web}</span></p>
+                    <p>Web : <span style={{fontWeight: "bold",color:"#000"}}><a href={web} target='_blank' rel="noreferrer" style={{color:"#000",textDecoration:"none"}}>{web}</a></span></p>
                     <p>Age : <span style={{fontWeight: "bold",color:"#000"}}>{age}</span></p>
                 </div>
             </div>
